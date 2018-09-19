@@ -218,7 +218,7 @@ test.stage2: debian/Makefile ; $(TEST_CMD) $(TESTS_STAGE2) config_idlebust=1
 test: shellcheck build-depends debian bootable-images test.full
 
 clean:
-	$(foreach dir,$(SUBDIRS),$(MAKE) -C $(dir) $@ &&) true
+	$(foreach dir,$(SUBDIRS),$(MAKE) -C $(dir) $@ ;) true
 	rm -f $(CLEAN_FILES)
 
 reallyclean:
