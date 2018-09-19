@@ -1,13 +1,16 @@
-[![Build Status](https://travis-ci.com/symmetryinvestments/zfs-on-root-installer.svg?branch=master)](https://travis-ci.com/symmetryinvestments/zfs-on-root-installer)
 
-A Bare Metal Installer for ZFS on Root
-======================================
+An automatable Bare Metal Installer for Debian and Ubuntu
+=========================================================
 
 This repository is intended to produce a bootable UEFI image that allows
-installing a full bare system with ZFS disks.  Be aware that it is not
-intended for building dual-boot systems.  While you are given the ability
-to choose which disks are used, the EFI boot system will wipe other OS
-entries.
+installing a full bare metal system.
+
+Originally for using ZFS on root disks, the project is expanding to support
+other debian-style distributions and other filesystems.
+
+Be aware that it is not intended for building dual-boot systems.
+While you are given the ability to choose which disks are used, the EFI
+boot system will wipe other OS entries.
 
 It uses an Ubuntu kernel and a minimal ramdisk builder to host the scripts
 used to perform the actual install.
