@@ -36,7 +36,7 @@ In most circumstances, the IMG image is the normal version to use as it is
 a standard EFI bootable disk image.
 
 These installer image files can be downloaded from the github
-[release](https://github.com/symmetryinvestments/zfs-on-root-installer/releases)
+release
 page - Use the most recent release for your download.
 
 Once your image file is downloaded, the simplest way to use it is to put the
