@@ -57,6 +57,7 @@ combined.initrd: $(DEBIAN).cpio kernel/ubuntu.amd64.modules.cpio
 
 Shell.efi:
 	wget -O $@ $(SHELL_URL)
+CLEAN_FILES += Shell.efi
 
 # Create a file with the size of the needed disk image in it
 size.txt: combined.initrd kernel/ubuntu.amd64.kernel Shell.efi
