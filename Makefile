@@ -88,9 +88,9 @@ REALLYCLEAN_FILES += persistent.storage
 
 SHELL_SCRIPTS := \
 	zfs-config/packages.d/_ALWAYS.customise.add/usr/local/sbin/statuspage \
-	zfs-config/packages.d/_ALWAYS.customise.add/zfs.install \
-	zfs-config/packages.d/_ALWAYS.customise.add/zfs.d/*.sh \
-	zfs-config/packages.d/_ALWAYS.customise.add/zfs.d/inchroot/*.sh \
+	zfs-config/packages.d/_ALWAYS.customise.add/installer/installer\
+	zfs-config/packages.d/_ALWAYS.customise.add/installer/runparts.d/*.sh \
+	zfs-config/packages.d/_ALWAYS.customise.add/installer/runparts.d/inchroot/*.sh \
 
 # Run a shell linter
 shellcheck:
