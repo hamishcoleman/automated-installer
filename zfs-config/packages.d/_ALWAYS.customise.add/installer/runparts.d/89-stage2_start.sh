@@ -13,12 +13,12 @@ script_prefix=stage2
 
 runscripts() {
     for i in "$@"; do
-        if [ -x "/zfs.d/$i" ]; then
+        if [ -x "/installer/runparts.d/$i" ]; then
             echo "Starting script $script_prefix $i:"
 
             # shellcheck source=/dev/null
             # all to be checked by shellcheck separately
-            . "/zfs.d/$i"
+            . "/installer/runparts.d/$i"
         fi
     done
 }
