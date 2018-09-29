@@ -247,30 +247,6 @@ the really clean target:
 
     make reallyclean
 
-Caching package downloads
--------------------------
-
-If performing repeated image builds, it is highly recommended to use a local
-apt cache:
-
-    apt install apt-cacher-ng
-
-To use this proxy during the build, just ensure that the normal proxy
-environment variable is set before starting the build.
-
-    # example if you use apt-cacher-ng
-    export http_proxy=http://127.0.0.1:3142
-
-The "CONFIG_PROXY" installer option can be set to make the installer
-use the proxy during the final system install.  It is also simple to add
-one file to the build process to give a default value to this variable:
-
-- Create a new file in your checkout called:
-    "zfs-config/packages.d/_ALWAYS.customise.add/zfs.d/19-config-local.sh"
-- Add one line to this file:
-    <pre>: "${CONFIG_PROXY:=http://your.proxy.host:3142}"</pre>
-- Ensure the file is executable:
-    chmod a+x "zfs-config/packages.d/_ALWAYS.customise.add/zfs.d/19-config-local.sh"
 
 Test targets
 ============

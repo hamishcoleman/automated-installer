@@ -22,14 +22,6 @@ before_script:
 script:
     - make test
 
-# TODO
-# - make "tip" builds
-#   by creating a tag if we are not currently on a tag
-#before_deploy:
-#    - git remote add github https://${TRAVIS_REPO_SLUG%/*}:${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
-#    - git tag -f prerelease
-#    - git push -f github prerelease
-
 deploy:
     provider: releases
     api_key: $GITHUB_TOKEN
