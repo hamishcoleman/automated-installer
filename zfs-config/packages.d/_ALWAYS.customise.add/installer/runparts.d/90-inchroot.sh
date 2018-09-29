@@ -2,8 +2,11 @@
 # Copy some scripts into the buildroot and setup to execute them in a chroot
 #
 
-cp -a /zfs.d/inchroot /mnt/zfs.d
-cp -a /zfs.install /mnt
+# TODO
+# - make this phase more generic (it is a little hacky)
+mkdir /mnt/installer
+cp -a /installer/runparts.d/inchroot /mnt/installer/runparts.d
+cp -a /installer/installer /mnt/installer
 
 mount -t devtmpfs none /mnt/dev
 mount -t devpts none /mnt/dev/pts
@@ -11,7 +14,7 @@ mount -t proc none /mnt/proc
 mount -t sysfs none /mnt/sys
 
 S=0
-script_prefix=inchroot chroot /mnt /zfs.install || S=$?
+script_prefix=inchroot chroot /mnt /installer/installer || S=$?
 
 if [ "$S" -ne 0 ]; then
     echo "ERROR: something in the chroot exited with an error ($S)"
@@ -26,8 +29,7 @@ umount /mnt/proc
 umount /mnt/sys
 
 # Remove our installer script files from the installed system
-rm -f /mnt/zfs.install
-rm -rf /mnt/zfs.d
+rm -rf /mnt/installer
 
 # TODO
 # - copy any /zfs.log file from the ramdisk into the installed system?
