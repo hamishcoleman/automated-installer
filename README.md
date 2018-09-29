@@ -82,7 +82,7 @@ Install
 -------
 
 Once booted, the VGA screen on the computer show a status page provided by the
-`htop` tool.  The ZFS installation can be started simply by using the *F10* key
+`htop` tool.  The installation can be started simply by using the *F10* key
 to exit the status page.
 
 At the start of the installation, some basic questions will asked (See below for
@@ -130,7 +130,8 @@ Error log
 ---------
 
 The interactive installation keeps a log of the installation process in
-"/zfs.log".  If the install fails, this file can be checked for error messages.
+"/installer/install.log".  If the install fails, this file can be checked
+for error messages.
 
 TODO
 - change this log file to be kept after a successful install
@@ -139,7 +140,7 @@ Lock file
 ---------
 
 To ensure that two installs are not running on the same system, when the
-installer is started, it creates a lock file "/zfs.lock".
+installer is started, it creates a lock file "/installer/installer.lock".
 
 If the installation fails for a temporary reason, this lock file will need to
 be manually deleted before retrying the install (or, simply reboot the
@@ -267,7 +268,7 @@ test_efigui         - Boot via EFI with a graphic console.  This is
     the terminal.
 
 test_efigui_persist - The same as "test_efigui" with the addition of
-    a virtual hard drive.  This can be used to test running the ZFS
+    a virtual hard drive.  This can be used to test running the
     installer scripts to completion and then booting the installed system.
     The virtual hard drive is only created if it is missing, so it will
     persist between test runs (if this is not desired, either delete the
