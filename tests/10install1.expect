@@ -7,14 +7,14 @@
 # check if we should run the idle buster
 if {[info exists config_idlebust]} {
     expect root@ramdisk {} timeout {bad 1 "shell prompt"}
-    send "chmod a+x /zfs.d/79-idlebust.sh\r"
+    send "chmod a+x /installer/runparts.d/79-idlebust.sh\r"
 }
 
 # Something about TravisCI really doesnt like installing ssh.
 # See the inchroot/31-fixup-ssh.sh file for more comments
 if {[info exists config_nossh]} {
     expect root@ramdisk {} timeout {bad 1 "shell prompt"}
-    send "chmod a-x /zfs.d/inchroot/31-fixup-ssh.sh\r"
+    send "chmod a-x /installer/runparts.d/inchroot/31-fixup-ssh.sh\r"
 }
 
 expect root@ramdisk {} timeout {bad 1 "shell prompt"}

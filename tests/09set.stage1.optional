@@ -4,4 +4,4 @@
 #
 
 expect root@ramdisk {} timeout {bad 1 "shell prompt"}
-send "chmod a+x /zfs.d/88-stage1_stop.sh\r"
+send "chmod a+x /installer/runparts.d/88-stage1_stop.sh\r"

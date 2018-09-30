@@ -4,7 +4,7 @@
 #
 
 expect root@ramdisk {} timeout {bad 1 "shell prompt"}
-send "bash /zfs.d/89-stage2_start.sh\r"
+send "bash /installer/runparts.d/89-stage2_start.sh\r"
 
 expect "stage2: mounting ZFS volumes"   {} timeout {bad 1 "mounting ZFS"}
 expect "stage2: resuming install"       {} timeout {bad 1 "resuming install"}
