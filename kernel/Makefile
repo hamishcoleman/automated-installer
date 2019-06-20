@@ -7,8 +7,8 @@ CONFIG_KERNEL_ARCH=amd64
 
 CONFIG_KERNEL=ubuntu
 # TODO - the kernel version number needs manual changing more often than desired
-CONFIG_KERNEL_PKG=linux-image-unsigned-5.0.0-18-generic_5.0.0-18.19_amd64.deb
-CONFIG_KERNEL_VERSION=5.0.0-18-generic
+CONFIG_KERNEL_PKG=linux-image-4.4.0-142-generic_4.4.0-142.168_amd64.deb
+CONFIG_KERNEL_VERSION=4.4.0-142-generic
 
 KERNEL_POOL=http://archive.ubuntu.com/ubuntu/pool/main/l/linux
 KERNEL_PKG=ubuntu.$(CONFIG_KERNEL_PKG)
