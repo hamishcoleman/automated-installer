@@ -111,7 +111,7 @@ disk_add_all() {
 disk_all() {
     # FIXME
     # - we really would like to sort by physical port..
-    for path in $DISKDB/*; do
+    for path in "$DISKDB"/*; do
         if [ ! -e "$path" ]; then
             # This happens if there are no disks
             continue
