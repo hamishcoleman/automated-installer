@@ -47,7 +47,7 @@ $(DEBIAN).cpio: debian
 
 # Ensure that the submodule is actually present
 debian/Makefile:
-	git submodule update --init --remote
+	git submodule update --init
 
 kernel/ubuntu.amd64.kernel kernel/ubuntu.amd64.modules.cpio:
 	$(MAKE) -C kernel all
