@@ -118,6 +118,15 @@ test_quick: combined.initrd kernel/ubuntu.amd64.kernel
 	    -initrd combined.initrd \
 	    -nographic
 
+test_quick_persist: combined.initrd kernel/ubuntu.amd64.kernel persistent.storage
+	$(QEMU_CMD) \
+	    $(QEMU_CMD_NET) \
+	    $(QEMU_CMD_DRIVE0) \
+	    -append console=ttyS0 \
+	    -kernel kernel/ubuntu.amd64.kernel \
+	    -initrd combined.initrd \
+	    -nographic
+
 # Test the EFI boot - with the 'normal' image wrapped in a ISO
 test_efi: $(ISO_IMAGE)
 	$(QEMU_CMD) \
