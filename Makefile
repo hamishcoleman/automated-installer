@@ -17,7 +17,7 @@ export CONFIGDIRS
 CONFIG_DEBIAN_ARCH := i386
 export CONFIG_DEBIAN_ARCH
 
-CONFIG_DEBIAN_VER := stretch
+CONFIG_DEBIAN_VER := buster
 
 SHELL_URL := https://github.com/tianocore/edk2/raw/UDK2018/ShellBinPkg/UefiShell/X64/Shell.efi
 
