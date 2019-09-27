@@ -4,6 +4,11 @@
 
 ZFS_POOL_SCRIPT=/tmp/zfs.zpool.script
 
+# TODO
+# - the "-d" option sets no features on the pool.  This probably creates
+#   a strange looking pool.  However there is an incompatible feature being
+#   set somewhere, causing creation to fail without it.  Fix this!
+
 cat <<EOF >"$ZFS_POOL_SCRIPT"
 # The command to use to assemble the ZFS filesystem.  For review and editing
 zpool create -d -f \\
