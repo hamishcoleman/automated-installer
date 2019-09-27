@@ -6,7 +6,7 @@ ZFS_POOL_SCRIPT=/tmp/zfs.zpool.script
 
 cat <<EOF >"$ZFS_POOL_SCRIPT"
 # The command to use to assemble the ZFS filesystem.  For review and editing
-zpool create -f \\
+zpool create -d -f \\
     -O atime=off \\
     -o ashift=12 \\
     -O canmount=off \\
