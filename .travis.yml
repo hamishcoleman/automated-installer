@@ -5,15 +5,16 @@ language: c
 # Its a lie, but it seems to be a language with less things autoinstalled at
 # the start of the build
 
+# The recommended and tested build environment is Debian
+#
+before_install:
+    - sudo apt-get purge libjpeg-turbo8-dev
+    - sudo debian/scripts/dwis_xenial2stretch
+
 install:
     - make build-depends
     - sudo apt-get install debian-archive-keyring
     - sudo apt-get install moreutils
-
-# The recommended and tested build environment is Debian
-#
-before_script:
-    - sudo debian/scripts/dwis_xenial2stretch
 
 script:
     - make test
