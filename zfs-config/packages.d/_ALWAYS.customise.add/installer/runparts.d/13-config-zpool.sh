@@ -15,7 +15,8 @@ zpool create -d -f \\
     -O atime=off \\
     -o ashift=12 \\
     -O canmount=off \\
-    -O compression=on \\
+    -O compression=lz4 \\
+    -o feature@lz4_compress=enabled \\
     -O normalization=formD \\
     -O mountpoint=none \\
     -R /mnt \\
