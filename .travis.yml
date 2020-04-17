@@ -13,7 +13,7 @@ before_install:
 
 install:
     - make build-depends
-    - sudo apt-get install debian-archive-keyring
+    - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EF0F382A1A7B6500
     - sudo apt-get install moreutils
 
 script:
