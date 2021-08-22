@@ -8,6 +8,7 @@ language: c
 # The recommended and tested build environment is Debian
 #
 before_install:
+    - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 648ACFD622F3D138
     - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EF0F382A1A7B6500
     - sudo apt-get purge libjpeg-turbo8-dev
     - sudo debian/scripts/dwis_xenial2stretch
